@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "GetStatistics";
+}
+
+<h2>Статистика звонков</h2>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            Вызывающий абонент
+        </th>
+        <th>
+            Отвечающий абонент
+        </th>
+        <th>
+            Дата звонка
+        </th>
+        <th>
+            Продолжительность
+        </th>
+        <th>
+            Цена
+        </th>
+    </tr>
+    @{ double total = 0;}
+    @{ double tot_length = 0;}
+    @foreach (CallManagement.Models.Call item in ViewBag.calls)
+    {
+    <tr>
+        <td>
+           @Html.DisplayFor(model => item.From.Number)
+        </td>
+        <td>
+           @Html.DisplayFor(model => item.To.Number)
+        </td>
+        <td>
+           @Html.DisplayFor(model => item.Start)
+        </td>
+        <td>
+           @Html.DisplayFor(model => item.FormattedLength)
+            @{ tot_length += @item.Length; }
+        </td>
+        <td>
+            @item.GetCostFor((CallManagement.Models.Phone) ViewBag.phone)
+            @{ total += @item.GetCostFor((CallManagement.Models.Phone) ViewBag.phone); }
+        </td>
+    </tr>
+    }
+    <tr>
+        <td colspan="3">
+            Итого:
+        </td>
+        <td>
+            @tot_length
+        </td>
+        <td>
+            @total
+        </td>
+    </tr>
+</table>

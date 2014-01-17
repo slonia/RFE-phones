@@ -1,0 +1,91 @@
+﻿@model CallManagement.Models.Tarif
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Tarif</legend>
+
+        @Html.HiddenFor(model => model.TarifId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Operator)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Operator)
+            @Html.ValidationMessageFor(model => model.Operator)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IncCostInNet)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IncCostInNet)
+            @Html.ValidationMessageFor(model => model.IncCostInNet)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OutCostInNet)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OutCostInNet)
+            @Html.ValidationMessageFor(model => model.OutCostInNet)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IncCostOutNet)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IncCostOutNet)
+            @Html.ValidationMessageFor(model => model.IncCostOutNet)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OutCostOutNet)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OutCostOutNet)
+            @Html.ValidationMessageFor(model => model.OutCostOutNet)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MonthlyCost)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MonthlyCost)
+            @Html.ValidationMessageFor(model => model.MonthlyCost)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SecondTarification)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SecondTarification)
+            @Html.ValidationMessageFor(model => model.SecondTarification)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

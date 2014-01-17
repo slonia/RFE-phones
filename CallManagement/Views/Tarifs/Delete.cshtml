@@ -1,0 +1,67 @@
+﻿@model CallManagement.Models.Tarif
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Tarif</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Operator)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Operator)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IncCostInNet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IncCostInNet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OutCostInNet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OutCostInNet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IncCostOutNet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IncCostOutNet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OutCostOutNet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OutCostOutNet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MonthlyCost)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MonthlyCost)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SecondTarification)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecondTarification)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

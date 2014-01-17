@@ -1,0 +1,46 @@
+﻿@model CallManagement.Models.Call
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Удаление</h2>
+
+<h3>Вы уверены?</h3>
+<fieldset>
+    <legend>Звонок</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FromId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FromId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ToId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ToId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Start)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Start)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.End)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.End)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Удалить" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

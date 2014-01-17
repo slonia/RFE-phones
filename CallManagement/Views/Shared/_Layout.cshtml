@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/bootstrap.css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+               <header>
+        <nav class="navbar navbar-default" role="navigation">
+ 
+             <ul class="nav navbar-nav navbar-left">
+      <li>@Html.ActionLink("Тарифы", "Index", "Tarifs")</li>
+      <li>@Html.ActionLink("Телефоны", "Index", "Phones")</li>
+      <li>@Html.ActionLink("Звонки", "Index", "Calls")</li>
+        <li>@Html.ActionLink("Подразделения", "Index", "Divisions")</li>
+        <li>@Html.ActionLink("Сотрудники", "Index", "Users")</li>
+    </ul>
+  <div class="collapse navbar-collapse">
+    <div class="navbar-right">
+        
+      @Html.Partial("_LoginPartial")
+    </div>
+  </div><!-- /.navbar-collapse -->
+</nav>
+                    
+                  
+        </header>
+        <div class="container">
+ 
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        </div>
+       
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

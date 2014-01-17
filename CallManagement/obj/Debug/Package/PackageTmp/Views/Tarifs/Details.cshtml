@@ -1,0 +1,64 @@
+﻿@model CallManagement.Models.Tarif
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Tarif</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Operator)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Operator)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IncCostInNet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IncCostInNet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OutCostInNet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OutCostInNet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IncCostOutNet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IncCostOutNet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OutCostOutNet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OutCostOutNet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MonthlyCost)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MonthlyCost)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SecondTarification)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecondTarification)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TarifId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

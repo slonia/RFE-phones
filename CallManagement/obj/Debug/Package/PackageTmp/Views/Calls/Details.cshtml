@@ -1,0 +1,43 @@
+﻿@model CallManagement.Models.Call
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Call</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FromId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FromId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ToId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ToId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Start)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Start)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.End)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.End)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CallId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

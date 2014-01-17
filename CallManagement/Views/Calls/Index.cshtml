@@ -1,0 +1,62 @@
+﻿@model IEnumerable<CallManagement.Models.Call>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Звонки</h2>
+
+<div class="well">
+    @using (Html.BeginForm("ProcessFile", "Calls", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    { 
+    <label for="file">Выберите xls-файл для загрузки данных:</label>
+    <input type="file" name="file" id="file"/>
+    <input type="submit" value="Загрузить" class="btn btn-default" />
+    }
+</div>
+    @Html.ActionLink("Создать", "Create", null, new { @class="btn btn-primary"})
+<br /><br />
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FromId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Start)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End)
+        </th>
+        <th>
+            Действия
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.From.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.To.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Start)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End)
+        </td>
+        <td>
+            <div class="btn-group-vertical">
+             @Html.ActionLink("Редактировать", "Edit", new { id=item.CallId }, new { @class="btn btn-default" }) 
+             @Html.ActionLink("Просмотреть", "Details", new { id=item.CallId }, new { @class="btn btn-default" }) 
+             @Html.ActionLink("Удалить", "Delete", new { id=item.CallId }, new { @class="btn btn-danger" })
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

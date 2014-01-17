@@ -1,0 +1,50 @@
+﻿@model CallManagement.Models.Phone
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Phone</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Division.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Division.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tarif.Operator)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tarif.Operator)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Number)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Number)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ParsedNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParsedNumber)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PhoneId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

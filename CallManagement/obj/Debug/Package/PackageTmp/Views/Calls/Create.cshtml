@@ -1,0 +1,59 @@
+﻿@model CallManagement.Models.Call
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Новый звонок</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Звонок</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FromId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FromId)
+            @Html.ValidationMessageFor(model => model.FromId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ToId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ToId)
+            @Html.ValidationMessageFor(model => model.ToId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Start)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Start)
+            @Html.ValidationMessageFor(model => model.Start)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.End)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.End)
+            @Html.ValidationMessageFor(model => model.End)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Назад", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CallManagement.Models.Tarif>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Тарифы</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "Create", null, new { @class="btn btn-primary"})
+</p>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Operator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncCostInNet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutCostInNet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncCostOutNet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutCostOutNet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthlyCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondTarification)
+        </th>
+        <th>
+            Действия
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncCostInNet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OutCostInNet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncCostOutNet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OutCostOutNet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonthlyCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecondTarification)
+        </td>
+        <td>
+            <div class="btn-group-vertical">
+            @Html.ActionLink("Редактировать", "Edit", new { id = item.TarifId }, new { @class="btn btn-default" }) 
+            @Html.ActionLink("Просмотреть", "Details", new { id=item.TarifId }, new { @class="btn btn-default" }) 
+            @Html.ActionLink("Удалить", "Delete", new { id=item.TarifId }, new { @class="btn btn-danger" })
+            </div>
+        </td>
+    </tr>
+}
+
+</table>
