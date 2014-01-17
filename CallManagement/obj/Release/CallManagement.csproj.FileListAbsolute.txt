@@ -8,6 +8,8 @@ C:\win_progs\CallManagement\CallManagement\bin\DotNetOpenAuth.OAuth.dll
 C:\win_progs\CallManagement\CallManagement\bin\DotNetOpenAuth.OpenId.dll
 C:\win_progs\CallManagement\CallManagement\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
 C:\win_progs\CallManagement\CallManagement\bin\EntityFramework.dll
+C:\win_progs\CallManagement\CallManagement\bin\Excel.dll
+C:\win_progs\CallManagement\CallManagement\bin\ICSharpCode.SharpZipLib.dll
 C:\win_progs\CallManagement\CallManagement\bin\Microsoft.Web.Infrastructure.dll
 C:\win_progs\CallManagement\CallManagement\bin\Microsoft.Web.WebPages.OAuth.dll
 C:\win_progs\CallManagement\CallManagement\bin\Newtonsoft.Json.dll
@@ -44,9 +46,7 @@ C:\win_progs\CallManagement\CallManagement\bin\DotNetOpenAuth.OAuth.Consumer.xml
 C:\win_progs\CallManagement\CallManagement\bin\DotNetOpenAuth.OAuth.xml
 C:\win_progs\CallManagement\CallManagement\bin\DotNetOpenAuth.OpenId.xml
 C:\win_progs\CallManagement\CallManagement\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-C:\win_progs\CallManagement\CallManagement\obj\Debug\CallManagement.dll
-C:\win_progs\CallManagement\CallManagement\obj\Debug\CallManagement.pdb
-C:\win_progs\CallManagement\CallManagement\obj\Debug\CallManagement.Migrations.InitialEntitiesCreation.resources
-C:\win_progs\CallManagement\CallManagement\obj\Debug\CallManagement.csproj.GenerateResource.Cache
-C:\win_progs\CallManagement\CallManagement\bin\Excel.dll
-C:\win_progs\CallManagement\CallManagement\bin\ICSharpCode.SharpZipLib.dll
+C:\win_progs\CallManagement\CallManagement\obj\Release\CallManagement.Migrations.InitialEntitiesCreation.resources
+C:\win_progs\CallManagement\CallManagement\obj\Release\CallManagement.csproj.GenerateResource.Cache
+C:\win_progs\CallManagement\CallManagement\obj\Release\CallManagement.dll
+C:\win_progs\CallManagement\CallManagement\obj\Release\CallManagement.pdb
