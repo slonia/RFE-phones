@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using System.Web.Security;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace CallManagement.Models
 {
@@ -38,10 +39,15 @@ namespace CallManagement.Models
 
     public class PhoneDBContext : DbContext
     {
+        public PhoneDBContext(): base("RemoteCS") { }
         public DbSet<Phone> Phones { get; set; }
         public DbSet<Call> Calls { get; set; }
         public DbSet<Tarif> Tarifs { get; set; }
         public DbSet<Division> Divisions { get; set; }
         public DbSet<User> Users { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+        }
     }
 }
